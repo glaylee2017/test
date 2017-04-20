@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huaiwang.starsky.mapper.manage.UserMapper">
+	<insert id="saveUser" parameterType="User" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into tb_user
+		values(#{id},#{phoneNum},#{password},#{pId},#{created},#{updated},#{state},#{isSend},#{isChangeP},#{activeCode.code},#{nickname},#{level});
+	</insert>
+	<select id="queryUserByPhoneNum" resultType="User">
+		select * from
+		tb_user where phone_num = #{phoneNum};
+	</select>
+	<select id="queryPlistById" parameterType="Integer" resultType="Integer">
+		select pid from tb_user_plist where id=#{id};
+	</select>
+	<insert id="saveUserPid">
+		<foreach collection="pIds" item="pId">
+			insert into tb_user_plist
+			values(#{id},#{pId},#{created},null);
+		</foreach>
+	</insert>
+
+	<select id="queryUserByPhoneExit" resultType="Integer">
+		select count(*)
+		from tb_user where phone_num = #{phoneNum};
+	</select>
+	<update id="updatePw">
+		update tb_user set password = #{password} where
+		phone_num = #{phoneNum};
+	</update>
+	<select id="queryPidListById" resultType="Integer">
+		select pid
+		from
+		tb_user_plist where id = #{id};
+	</select>
+	<select id="queryLimitList" resultType="Integer">
+		select * from
+		tb_lim_user;
+	</select>
+	<select id="queryUserByNickname" resultType="User" parameterType="String">
+		select id from tb_user where nickname = #{nickname};
+	</select>
+</mapper>

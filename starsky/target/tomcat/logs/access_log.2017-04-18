@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [18/Apr/2017:19:27:56 +0800] "GET /user/updatePw?phoneNum=111&password=12300 HTTP/1.1" 404 1013 http-bio-8081-exec-1 89
+0:0:0:0:0:0:0:1 - - [18/Apr/2017:19:27:56 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8081-exec-3 4
+0:0:0:0:0:0:0:1 - - [18/Apr/2017:19:28:39 +0800] "GET /user/updatePw?phoneNum=111&password=12300 HTTP/1.1" 200 68 http-bio-8081-exec-1 121
+0:0:0:0:0:0:0:1 - - [18/Apr/2017:19:28:43 +0800] "GET /user/updatePw?phoneNum=111&password=123000 HTTP/1.1" 200 65 http-bio-8081-exec-5 421

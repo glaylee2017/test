@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [19/Apr/2017:13:27:58 +0800] "GET /user/regist?phoneNum=999&password=888&nickname=ceshi3&activeCode.code=555 HTTP/1.1" 200 68 http-bio-8081-exec-1 148
+0:0:0:0:0:0:0:1 - - [19/Apr/2017:13:27:58 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8081-exec-3 7
+0:0:0:0:0:0:0:1 - - [19/Apr/2017:13:28:08 +0800] "GET /user/regist?phoneNum=999&password=1111111&nickname=ceshi3&activeCode.code=555 HTTP/1.1" 200 89 http-bio-8081-exec-4 412
+0:0:0:0:0:0:0:1 - - [19/Apr/2017:13:28:53 +0800] "GET /user/regist?phoneNum=999&password=1111111&nickname=ceshi3&activeCode.code=555 HTTP/1.1" 200 70 http-bio-8081-exec-8 115

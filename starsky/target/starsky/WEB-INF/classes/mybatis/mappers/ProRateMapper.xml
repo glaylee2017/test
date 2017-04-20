@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huaiwang.starsky.mapper.manage.ProRateMapper">
+
+	<select id="findProByUpdated" resultType="ProRate">
+	 select id,min_rate,max_rate,rate,type,created,updated from tb_pro_rate
+			where type = #{type} and DATE_FORMAT(updated,'%Y-%m-%d') = DATE_FORMAT(#{data},'%Y-%m-%d');
+	</select>
+
+</mapper>
